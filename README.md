@@ -20,10 +20,12 @@ download verification.
 
 ## Updates
 
-DROIDEX checks a signed Sparkle feed for new versions. The Sidebar includes a
-**Check for updates** button that opens Sparkle's native update window. Nothing
-is downloaded or installed until you approve it. Keep DROIDEX in Applications
-so the approved update can be applied cleanly.
+DROIDEX checks its signed Sparkle feed for new versions. A blue download button
+appears beside Settings only when a newer version is available. Clicking it
+opens Sparkle's native update window; nothing downloads or installs until you
+approve it. You can also check manually in **Settings → Setup & updates** or
+**DROIDEX → Check for Updates…**. Keep DROIDEX in Applications so an approved
+update can be applied cleanly.
 
 ## Privacy and support
 
