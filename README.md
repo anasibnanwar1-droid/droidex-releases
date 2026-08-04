@@ -2,6 +2,8 @@
 
 This repository hosts the official DROIDEX downloads for macOS.
 
+[Visit the DROIDEX website](https://droidex.vercel.app)
+
 - [Download for Apple silicon](https://github.com/droidex-anas/droidex-releases/releases/latest/download/droidex-arm64.dmg)
 - [Download for Intel](https://github.com/droidex-anas/droidex-releases/releases/latest/download/droidex-x64.dmg)
 
