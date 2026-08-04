@@ -23,10 +23,15 @@ override Gatekeeper after downloading from this repository and checking the
 published SHA-256 digest. We do not recommend disabling Gatekeeper or broadly
 removing quarantine attributes.
 
-Unsigned macOS applications cannot use Electron's automatic install mechanism.
-DROIDEX checks this repository for newer versions and shows a **Download**
-control; install each new DMG manually. A future signed/notarized build can
-restore automatic download and restart.
+After this first-launch approval, DROIDEX uses Sparkle to check for and install
+future updates. Every architecture has its own HTTPS update feed and ZIP. Both
+the feed and the ZIP are verified with DROIDEX's embedded EdDSA public key
+before Sparkle replaces the app. You do not need to repeat the DMG install for
+normal updates.
+
+Keep DROIDEX in Applications and leave **Keep DROIDEX up to date** enabled in
+Settings. If an update cannot be installed, download the latest matching DMG
+from this repository and repeat the documented Apple approval flow.
 
 ## Privacy and support
 
@@ -37,6 +42,7 @@ inside a shipped application remains technically inspectable; the client
 contains no privileged server credentials or source maps.
 
 Never put prompts, project files, logs, tokens, or personal data in a public
-report. Private `/bug` delivery and automatic crash collection require the
-separately configured diagnostics service; the unsigned preview will report
-clearly when that service is unavailable.
+report. The in-app `/bug` command and automatic crash collection deliver
+minimal diagnostics privately. `/bug` returns a `BUG-…` report ID and a
+pseudonymous `USR-…` support ID that can be shared with support without
+publishing application source or user project data.
