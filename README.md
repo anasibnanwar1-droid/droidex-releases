@@ -1,8 +1,9 @@
 # DROIDEX Releases
 
 This public repository hosts official DROIDEX macOS downloads. The current
-developer preview is **ad-hoc signed, without a trusted Developer ID, and not
-notarized** so it can be distributed without a paid Apple Developer membership.
+developer preview is **ad-hoc signed and not notarized**. It has no trusted
+Developer ID, so it can be distributed without a paid Apple Developer
+membership.
 
 Download the latest DMG for
 [Apple silicon](https://github.com/anasibnanwar1-droid/droidex-releases/releases/latest/download/droidex-arm64.dmg)
