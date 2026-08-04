@@ -1,8 +1,9 @@
 # DROIDEX Releases
 
 This public repository hosts official DROIDEX macOS downloads. The current
-`v0.1.0` developer preview is **unsigned and not notarized** so it can be
-distributed without a paid Apple Developer membership.
+`v0.1.0` developer preview is **ad-hoc signed, without a trusted Developer ID,
+and not notarized** so it can be distributed without a paid Apple Developer
+membership.
 
 Download the latest DMG from
 [Releases](https://github.com/anasibnanwar1-droid/droidex-releases/releases).
