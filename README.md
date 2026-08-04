@@ -1,48 +1,37 @@
 # DROIDEX Releases
 
-This public repository hosts official DROIDEX macOS downloads. The current
-developer preview is **ad-hoc signed and not notarized**. It has no trusted
-Developer ID, so it can be distributed without a paid Apple Developer
-membership.
+This repository hosts the official DROIDEX downloads for macOS.
 
-Download the latest DMG for
-[Apple silicon](https://github.com/anasibnanwar1-droid/droidex-releases/releases/latest/download/droidex-arm64.dmg)
-or
-[Intel](https://github.com/anasibnanwar1-droid/droidex-releases/releases/latest/download/droidex-x64.dmg).
-Published releases are immutable and include `SHA256SUMS` so you can verify the
-download.
+- [Download for Apple silicon](https://github.com/anasibnanwar1-droid/droidex-releases/releases/latest/download/droidex-arm64.dmg)
+- [Download for Intel](https://github.com/anasibnanwar1-droid/droidex-releases/releases/latest/download/droidex-x64.dmg)
 
-## Install the unsigned preview
+## Install DROIDEX
 
 1. Download the DMG matching your Mac and drag DROIDEX to Applications.
-2. Try to open DROIDEX once. macOS will warn that Apple cannot verify the
-   developer.
-3. Use the DMG's **Open Privacy & Security** shortcut, scroll to Security,
-   choose **Open Anyway**, then confirm **Open**.
+2. Open DROIDEX once. macOS will show a security warning.
+3. In the DMG, double-click **Open Privacy & Security**.
+4. Find the DROIDEX notice, click **Open Anyway**, and confirm.
 
-This creates an exception for that copy of DROIDEX. These steps follow
-[Apple's documented override](https://support.apple.com/en-us/102445). Only
-override Gatekeeper after downloading from this repository and checking the
-published SHA-256 digest. We do not recommend disabling Gatekeeper or broadly
-removing quarantine attributes.
+DROIDEX is currently **ad-hoc signed and not notarized**. This keeps distribution
+free of a paid Apple Developer membership, but requires manual approval on first
+launch. Confirm **Open** and authenticate if macOS asks. Do not disable
+Gatekeeper. Published releases are immutable and include `SHA256SUMS` for
+download verification.
 
-After this first-launch approval, DROIDEX uses Sparkle to check for future
-updates. Every architecture has its own HTTPS update feed and ZIP. Both the feed
-and ZIP are verified with DROIDEX's embedded EdDSA public key. DROIDEX does not
-download or install an update until you explicitly choose the update action.
-Keep DROIDEX in Applications so Sparkle can replace it after your approval. If
-an update cannot be installed, download the latest matching DMG above.
+## Updates
+
+DROIDEX checks a signed Sparkle feed for new versions. The Sidebar includes a
+**Check for updates** button that opens Sparkle's native update window. Nothing
+is downloaded or installed until you approve it. Keep DROIDEX in Applications
+so the approved update can be applied cleanly.
 
 ## Privacy and support
 
-The application source repository remains private during the closed-source
-release period. GitHub's automatic source archives for this repository contain
-only these public download documents, not the application source. Electron code
-inside a shipped application remains technically inspectable; the client
-contains no privileged server credentials or source maps.
+The application source repository remains private. This public repository's
+source archives contain only README and SECURITY documents, not the application
+source. Code packaged in the Electron app remains technically inspectable;
+releases contain no privileged server credentials or public source maps.
 
-Never put prompts, project files, logs, tokens, or personal data in a public
-report. The in-app `/bug` and `/feedback` commands and automatic crash
-collection deliver minimal diagnostics privately. A successfully delivered
-report returns a copyable `RPT-…` ID that can be shared with support without
-publishing application source or user project data.
+Use `/bug` or `/feedback` inside DROIDEX to send a private report. After a
+successful submission, copy the `RPT-…` ID for support. Do not post prompts,
+project files, logs, tokens, or personal information in public issues.
